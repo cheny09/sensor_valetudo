@@ -1,0 +1,234 @@
+elements:
+  - camera_image: camera.rockrobo_map
+    entity: camera.rockrobo_map
+    style:
+      left: 38%
+      top: 48%
+      width: 120%
+    type: image
+  - icon: 'mdi:bell-ring'
+    style:
+      color: '#3090C7'
+      left: 80%
+      top: 90%
+    tap_action:
+      action: call-service
+      service: vacuum.locate
+      service_data:
+        entity_id: vacuum.rockrobo
+    type: icon
+  - icon: 'mdi:crosshairs'
+    style:
+      color: '#3090C7'
+      left: 68%
+      top: 90%
+    tap_action:
+      action: call-service
+      service: vacuum.clean_spot
+      service_data:
+        entity_id: vacuum.rockrobo
+    type: icon
+  - icon: 'mdi:home'
+    style:
+      color: '#3090C7'
+      left: 56%
+      top: 90%
+    tap_action:
+      action: call-service
+      service: vacuum.return_to_base
+      service_data:
+        entity_id: vacuum.rockrobo
+    type: icon
+  - icon: 'mdi:stop'
+    style:
+      color: '#3090C7'
+      left: 44%
+      top: 90%
+    tap_action:
+      action: call-service
+      service: vacuum.stop
+      service_data:
+        entity_id: vacuum.rockrobo
+    type: icon
+  - icon: 'mdi:pause'
+    style:
+      color: '#3090C7'
+      left: 32%
+      top: 90%
+    tap_action:
+      action: call-service
+      service: vacuum.pause
+      service_data:
+        entity_id: vacuum.rockrobo
+    type: icon
+  - icon: 'mdi:play'
+    style:
+      color: '#3090C7'
+      left: 20%
+      top: 90%
+    tap_action:
+      action: call-service
+      service: vacuum.start
+      service_data:
+        entity_id: vacuum.rockrobo
+    type: icon
+  - entity: vacuum.rockrobo
+    style:
+      background-color: '#cccccc'
+      border-color: 'rgb(34, 154, 210)'
+      border-radius: 6px
+      color: 'rgb(255, 255, 255)'
+      font-family: Trebuchet MS
+      font-size: 200%
+      font-weight: bold
+      left: 50%
+      top: 8%
+      transform: 'translate(-50%,-50%)'
+    tap_action: more-info
+    type: state-label
+  - entity: sensor.vacuum_battery
+    style:
+      color: '#ffffff'
+      font-size: 90%
+      font-weight: bold
+      pointer-events: none
+      right: 4%
+      top: 8%
+      transform: 'translate(0%,-50%)'
+    type: state-label
+  - entity: sensor.vacuum_cleanmainbrush
+    style:
+      color: '#ffffff'
+      font-family: Trebuchet MS
+      font-size: 75%
+      font-weight: bold
+      pointer-events: none
+      right: 7%
+      top: 35%
+      transform: 'translate(0%,-50%)'
+    type: state-label
+  - entity: sensor.vacuum_cleansidebrush
+    style:
+      color: '#ffffff'
+      font-family: Trebuchet MS
+      font-size: 75%
+      font-weight: bold
+      pointer-events: none
+      right: 7%
+      top: 45%
+      transform: 'translate(0%,-50%)'
+    type: state-label
+  - entity: sensor.vacuum_cleanfilter
+    style:
+      color: '#ffffff'
+      font-family: Trebuchet MS
+      font-size: 75%
+      font-weight: bold
+      pointer-events: none
+      right: 7%
+      top: 55%
+      transform: 'translate(0%,-50%)'
+    type: state-label
+  - entity: sensor.vacuum_sensordirtyleft
+    style:
+      color: '#ffffff'
+      font-family: Trebuchet MS
+      font-size: 75%
+      font-weight: bold
+      pointer-events: none
+      right: 7%
+      top: 65%
+      transform: 'translate(0%,-50%)'
+    type: state-label
+  - entity: sensor.vacuum_fan_speed
+    style:
+      color: '#84a6ba'
+      font-size: 90%
+      font-weight: bold
+      left: 25%
+      pointer-events: none
+      top: 80%
+      transform: 'translate(-50%,-50%)'
+    type: state-label
+  - entity: sensor.vacuum_cleaned_area
+    prefix: 'Area: '
+    style:
+      color: '#84a6ba'
+      font-family: Trebuchet MS
+      font-size: 90%
+      font-weight: bold
+      left: 50%
+      pointer-events: none
+      top: 80%
+      transform: 'translate(-50%,-50%)'
+    type: state-label
+  - entity: sensor.vacuum_cleaning_time
+    prefix: 'Time: '
+    style:
+      color: '#84a6ba'
+      font-family: Trebuchet MS
+      font-size: 90%
+      font-weight: bold
+      pointer-events: none
+      right: 25%
+      top: 80%
+      transform: 'translate(50%,-50%)'
+    type: state-label
+  - icon: 'mdi:reload'
+    style:
+      border-color: 'rgb(34, 154, 210)'
+      border-right-style: solid
+      color: '#3090C7'
+      padding-right: 1%
+      right: '-3%'
+      top: 35%
+    tap_action:
+      action: call-service
+      service: vacuum.locate
+      service_data:
+        entity_id: vacuum.rockrobo
+    type: icon
+  - icon: 'mdi:reload'
+    style:
+      border-color: 'rgb(34, 154, 210)'
+      border-right-style: solid
+      color: '#3090C7'
+      padding-right: 1%
+      right: '-3%'
+      top: 45%
+    tap_action:
+      action: call-service
+      service: vacuum.locate
+      service_data:
+        entity_id: vacuum.rockrobo
+    type: icon
+  - icon: 'mdi:reload'
+    style:
+      border-color: 'rgb(34, 154, 210)'
+      border-right-style: solid
+      color: '#3090C7'
+      padding-right: 1%
+      right: '-3%'
+      top: 55%
+    tap_action:
+      action: call-service
+      service: vacuum.locate
+      service_data:
+        entity_id: vacuum.rockrobo
+    type: icon
+  - icon: 'mdi:reload'
+    style:
+      border-color: 'rgb(34, 154, 210)'
+      border-right-style: solid
+      color: '#3090C7'
+      padding-right: 1%
+      right: '-3%'
+      top: 65%
+    tap_action:
+      action: call-service
+      service: vacuum.locate
+      service_data:
+        entity_id: vacuum.rockrobo
+    type: icon
+image: /local/custom_lovelace/xiaomi_vertical_card/black.png
+type: picture-elements
