@@ -1,0 +1,25 @@
+smartir:
+
+switch:
+  - platform: broadlink
+    host: !secret ip_rm_habitacion
+    mac: !secret mac_rm_habitacion
+
+  - platform: broadlink
+    host: !secret ip_rm_salon
+    mac: !secret mac_rm_salon
+
+climate:
+  - platform: smartir
+    name: Aire Acondicionado
+    unique_id: aire_acondicionado
+    device_code: 1285
+    controller_data: !secret ip_rm_habitacion
+    temperature_sensor: sensor.0x00158d000316055a_temperature
+
+media_player:
+  - platform: smartir
+    name: TV universal
+    unique_id: television
+    device_code: 1060
+    controller_data: !secret ip_rm_salon
